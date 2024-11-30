@@ -1,32 +1,25 @@
 //1.Js Ans
-
-// Using let
 let a = 5;
 let b = 3;
 let sum = a + b;
-console.log("Sum (using let):", sum); // Output: 8
-// Using var
+console.log("Sum (using let):", sum);
+
 var x = 10;
 var y = 4;
 var difference = x - y;
-console.log("Difference (using var):", difference); // Output: 6
-// Using const
-const p = 7;
+console.log("Difference (using var):", difference);
+
 const q = 2;
 const product = p * q;
-console.log("Product (using const):", product); // Output: 14
-// Division using all three
-let division = a / b;
-console.log("Division (using let):", division); // Output: 1.666...
-// We can't reassign a value to a `const` variable, so:
+console.log("Product (using const):", product);
+console.log("Division (using let):", division);
 const divisionConst = p / q;
-console.log("Division with const:", divisionConst); // Output: 3.5
+console.log("Division with const:", divisionConst);
 
 // 2. Js Ans
-// Example array
 
 const numbers = [1, 2, 3, 4, 5];
-// Map: Applies a function to each item in an array and returns a new array
+
 function customMap(arr, callback) {
   const result = [];
   for (let i = 0; i < arr.length; i++) {
@@ -36,8 +29,7 @@ function customMap(arr, callback) {
 }
 const mapped = customMap(numbers, (num) => num * 2);
 console.log("Mapped:", mapped);
-// Output: [2, 4, 6, 8, 10]
-// Reduce: Reduces the array to a single value by applying a function
+
 function customReduce(arr, callback, initialValue) {
   let accumulator = initialValue;
   for (let i = 0; i < arr.length; i++) {
@@ -45,10 +37,10 @@ function customReduce(arr, callback, initialValue) {
   }
   return accumulator;
 }
+
 const res = customReduce(numbers, (acc, num) => acc + num, 0);
 console.log("Sum:", res);
-// Output: 15
-// Filter: Returns a new array with elements that satisfy the condition
+
 function customFilter(arr, callback) {
   const result = [];
   for (let i = 0; i < arr.length; i++) {
@@ -58,14 +50,16 @@ function customFilter(arr, callback) {
   }
   return result;
 }
+
 const filtered = customFilter(numbers, (num) => num % 2 === 0);
-console.log("Filtered (even numbers):", filtered); // Output: [2, 4]
-// FlatMap: First maps each element using the callback, then flattens the result
+console.log("Filtered (even numbers):", filtered);
+
 function customFlatMap(arr, callback) {
   return arr.reduce((acc, curr) => acc.concat(callback(curr)), []);
 }
+
 const flatMapped = customFlatMap([1, 2, 3], (num) => [num, num * 2]);
-console.log("FlatMapped:", flatMapped); // Output: [1, 2, 2, 4, 3, 6]
+console.log("FlatMapped:", flatMapped);
 
 //3.Ans
 function greetUser(name, callback) {
@@ -77,8 +71,7 @@ greetUser("Alice", sayGoodbye);
 //4.Ans
 
 function reverseString(str) {
-  // Convert the string into an array of characters, reverse the array, and join it back into a string
   return str.split("").reverse().join("");
 }
 const reversed = reverseString("hello");
-console.log("Reversed String:", reversed); // Output: "olleh"
+console.log("Reversed String:", reversed);
