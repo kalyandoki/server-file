@@ -9,6 +9,7 @@ const server = http.createServer((req, res) => {
     status: "success",
     data: { id: 1, name: "John Doe", role: "Developer" },
   };
+
   // Write the JSON object as the response and end the request
   res.statusCode = 200;
   res.end(JSON.stringify(responseObject));
